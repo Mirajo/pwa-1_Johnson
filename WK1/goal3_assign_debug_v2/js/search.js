@@ -11,15 +11,15 @@
 	
 	// Variable initialization (DO NOT FIX ANY OF THE BELOW VAR's)
 	var resultsDIV = document.getElementById("results"),   //define var to display results
-		searchInput = document.forms[0].search,            //
+		searchInput = document.forms[0].search,            // Search the form input of the document
 		currentSearch = ''                                 // Current search is empty
 	;
 	
 	// Validates search query
-	var validate == function(query){   //create function
+	var validate = function(query){   //create validate function
 		
 		// Trim whitespace from start and end of search query
-		while(query.charAt(0) = " "){
+		while(query.charAt(0) = " "){      
 			query = query.substring(1, query.length);
 		};
 		while(query.charAt(query.length-1) === ""){
@@ -66,8 +66,7 @@
 				if(compare !== -1){
 					results.push(db[i]);
 				};
-			;
-		;
+				
 		
 		results.sort();
 		
@@ -118,7 +117,7 @@
 	// THE LINE DIRECTLY BELOW IS CORRECT
 	document.forms[0].onsubmit = function(){
 		var query = searchInput.value;
-		validqte(query);
+		validate(query);
 
         // return false is needed for most events - this will be reviewed in upcoming course material
         // THE LINE DIRECTLY BELOW IS CORRECT
