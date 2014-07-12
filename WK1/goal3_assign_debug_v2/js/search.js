@@ -1,6 +1,6 @@
 /*
      Name: Miranda Johnson
-     Date: 07- 11- 14
+     Date: 07 -11 -14
      Class & Section:  PWA1-####
      Comments: "Goal 3: Review of WPF"
  */
@@ -10,45 +10,45 @@
 (function(){
 	
 	// Variable initialization (DO NOT FIX ANY OF THE BELOW VAR's)
-	var resultsDIV = document.getElementById("results"),   //define var to display results
-		searchInput = document.forms[0].search,            // Search the form input of the document
-		currentSearch = ''                                 // Current search is empty
+	var resultsDIV = document.getElementById("results"),     //define var to display results of document by element id
+		searchInput = document.forms[0].search,              // Search the form input of the document
+		currentSearch = ''                                   // Current search is empty
 	;
 	
 	// Validates search query
 	var validate = function(query){   //create validate function
 		
 		// Trim whitespace from start and end of search query
-		while(query.charAt(0) = " "){      
-			query = query.substring(1, query.length);
+		while(query.charAt(0) = " "){        //while loop to check the length of query is equal to
+			query = query.substring(1, query.length);        //
 		};
 		while(query.charAt(query.length-1) === ""){
 			query = query.substring(0, query.length-1);
-		;
-		
+		;   												 // extra colon
+		 
 		// Check search length, must have 3 characters
 		if(query.length < 3){       // check to see if the query has less than three characters
-			alert("Your search query is too small, try again.);
+			alert("Your search query is too small, try again.);       //Alert message when the search query is too small
 			
 			// (DO NOT FIX THE LINE DIRECTLY BELOW)
 			searchInput.focus();
 			return;
 		};
 		
-		search(query);   //perform the search
+		search(query);                                         //perform the search
 	};
 	
 	// Finds search matches
-	var search = function(query)
+	var search = function(query)                               //Define the search variable and function
 		
-		// split the user's search query string into an array
-		var queryArray = query.join(" ");
+		// split the user's search query string into an array   
+		var queryArray = query.join(" ");                       //variable for query array   
 		
 		// array to store matched results from database.js
-		var results = [];
+		var results = [];                                       //variable for results 
 
 		// loop through each index of db array
-		for(var i=0, j=db.length; i<j; i++){
+		for(var i=0, j=db.length; i<j; i++){                     //for loop to go through the database
 		
 			// each db[i] is a single video item, each title ends with a pipe "|"
 			// save a lowercase variable of the video title
