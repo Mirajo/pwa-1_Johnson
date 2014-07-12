@@ -1,14 +1,22 @@
+/*
+     Name: Miranda Johnson
+     Date: 07- 11- 14
+     Class & Section:  PWA1-####
+     Comments: "Goal 3: Review of WPF"
+ */
+
+
 // Create privatized scope using a self-executing function
 (function(){
 	
 	// Variable initialization (DO NOT FIX ANY OF THE BELOW VAR's)
-	var resultsDIV = document.getElementById("results"),
-		searchInput = document.forms[0].search,
-		currentSearch = ''
+	var resultsDIV = document.getElementById("results"),   //define var to display results
+		searchInput = document.forms[0].search,            //
+		currentSearch = ''                                 // Current search is empty
 	;
 	
 	// Validates search query
-	var validqte == function(query){
+	var validate == function(query){   //create function
 		
 		// Trim whitespace from start and end of search query
 		while(query.charAt(0) = " "){
@@ -19,7 +27,7 @@
 		;
 		
 		// Check search length, must have 3 characters
-		if(query.length < 3){
+		if(query.length < 3){       // check to see if the query has less than three characters
 			alert("Your search query is too small, try again.);
 			
 			// (DO NOT FIX THE LINE DIRECTLY BELOW)
@@ -27,7 +35,7 @@
 			return;
 		};
 		
-		search(query);
+		search(query);   //perform the search
 	};
 	
 	// Finds search matches
