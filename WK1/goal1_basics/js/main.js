@@ -1,6 +1,6 @@
 /*
-     Name:
-     Date:
+     Name: Miranda Johnson
+     Date: 07- 10- 14
      Class & Section:  PWA1-####
      Comments: "Goal 1: Review of WPF"
  */
