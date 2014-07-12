@@ -13,7 +13,7 @@
 	var resultsDIV = document.getElementById("results"),     //define var to display results of document by element id
 		searchInput = document.forms[0].search,              // Search the form input of the document
 		currentSearch = ''                                   // Current search is empty
-	;
+	;                                                        // Colon to end statement
 	
 	// Validates search query
 	var validate = function(query){   //create validate function
@@ -22,17 +22,17 @@
 		while(query.charAt(0) = " "){        //while loop to check the length of query is equal to
 			query = query.substring(1, query.length);        //
 		};
-		while(query.charAt(query.length-1) === ""){
+		while(query.charAt(query.length-1) === ""){          // 
 			query = query.substring(0, query.length-1);
-		;   												 // extra colon
+		;   												 // error extra colon
 		 
 		// Check search length, must have 3 characters
 		if(query.length < 3){       // check to see if the query has less than three characters
 			alert("Your search query is too small, try again.);       //Alert message when the search query is too small
 			
 			// (DO NOT FIX THE LINE DIRECTLY BELOW)
-			searchInput.focus();
-			return;
+			searchInput.focus();                               //
+			return;                                             // to stop function
 		};
 		
 		search(query);                                         //perform the search
@@ -52,45 +52,45 @@
 		
 			// each db[i] is a single video item, each title ends with a pipe "|"
 			// save a lowercase variable of the video title
-			var dbTitleEnd = db[i].indexOf('|');
-			var dbitem = db[i].tolowercase().substring(0, dbTitleEnd);
+			var dbTitleEnd = db[i].indexOf('|');                  //variable for database
+			var dbitem = db[i].tolowercase().substring(0, dbTitleEnd);   //convert variable to lower case
 			
 			// loop through the user's search query words
 			// save a lowercase variable of the search keyword
-			for(var ii=0, jj=queryArray.length; ii<jj; ii++){
-				var qitem = queryArray[ii].tolowercase();
+			for(var ii=0, jj=queryArray.length; ii<jj; ii++){      // for loop to query through an array
+				var qitem = queryArray[ii].tolowercase();          //query through array change to lowercase
 				
 				// is the keyword anywhere in the video title?
 				// If a match is found, push full db[i] into results array
-				var compare = dbitem.indexOf(qitem);
-				if(compare !== -1){
-					results.push(db[i]);
+				var compare = dbitem.indexOf(qitem);               //variable to compare database items
+				if(compare !== -1){                                //if compare does not equal
+					results.push(db[i]);                           //database results
 				};
 				
 		
-		results.sort();
+		results.sort();                                            //sort results
 		
 		// Check that matches were found, and run output functions
-		if(results.length = 0){
-			noMatch();
-		}else{
-			showMatches(results);
+		if(results.length = 0){                                   //If results length is 0
+			noMatch();                                            // There is no match
+		}else{                                                    // if/ else statement
+			showMatches(results);                                 // else show the results/matches
 		};
 	};
 	
 	// Put "No Results" message into page (DO NOT FIX THE HTML VAR NOR THE innerHTML)
-	var noMatch = function(){
-		var html = ''+
-			'<p>No Results found.</p>'+
-			'<p style="font-size:10px;">Try searching for "JavaScript".  Just an idea.</p>'
+	var noMatch = function(){                                     // define no match function
+		var html = ''+                                            //html variable
+			'<p>No Results found.</p>'+                           //message to display when no results are found
+			'<p style="font-size:10px;">Try searching for "JavaScript".  Just an idea.</p>' //no results message to display in html
 		;
-		resultsDIV.innerHTML = html;
+		resultsDIV.innerHTML = html;                               // Add message to html div
 	};
 	
 	// Put matches into page as paragraphs with anchors
-	var showMatches = function(results){
+	var showMatches = function(results){                           //Show matches function passing result parameter
 		
-		// THE NEXT 4 LINES ARE CORRECT.
+		// THE NEXT 4 LINES ARE CORRECT.                           //
 		var html = '<p>Results</p>', 
 			title, 
 			url
