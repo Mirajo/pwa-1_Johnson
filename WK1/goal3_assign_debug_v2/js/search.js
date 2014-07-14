@@ -31,7 +31,7 @@
 			alert("Your search query is too small, try again.);       //Alert message when the search query is too small
 			
 			// (DO NOT FIX THE LINE DIRECTLY BELOW)
-			searchInput.focus();                               //
+			searchInput.focus();                                 //
 			return;                                             // to stop function
 		};
 		
@@ -82,7 +82,7 @@
 	var noMatch = function(){                                     // define no match function
 		var html = ''+                                            //html variable
 			'<p>No Results found.</p>'+                           //message to display when no results are found
-			'<p style="font-size:10px;">Try searching for "JavaScript".  Just an idea.</p>' //no results message to display in html
+			'<p style="font-size:10px;">Try searching for "JavaScript".  Just an idea.</p>' //suggestion message to display in html
 		;
 		resultsDIV.innerHTML = html;                               // Add message to html div
 	};
@@ -90,34 +90,34 @@
 	// Put matches into page as paragraphs with anchors
 	var showMatches = function(results){                           //Show matches function passing result parameter
 		
-		// THE NEXT 4 LINES ARE CORRECT.                           //
-		var html = '<p>Results</p>', 
+		// THE NEXT 4 LINES ARE CORRECT.                           
+		var html = '<p>Results</p>',                               //variable to show results in html
 			title, 
 			url
 		;
 		
 		// loop through all the results search() function
-		for(var i=0, j=results.length; i<j; i++){
+		for(var i=0, j=results.length; i<j; i++){                  // for loop to search through results
 		
 			// title of video ends with pipe
 			// pull the title's string using index numbers
-			titleEnd = results[i].indexOf('|');
-			title = results[i].subString(0, titleEnd);
+			titleEnd = results[i].indexOf('|');                    //
+			title = results[i].subString(0, titleEnd);             //
 			
 			// pull the video url after the title
-			url = results[i].substring(results[i].indexOf('|')+1, results[i].length);
+			url = results[i].substring(results[i].indexOf('|')+1, results[i].length);  //
 			
 			// make the video link - THE NEXT LINE IS CORRECT.
-			html += '<p><a href=' + url + '>' + title + '</a></p>';
+			html += '<p><a href=' + url + '>' + title + '</a></p>';   //concatenate href and url and title
 		};
 		resultsDIV.innerHTML = html; //THIS LINE IS CORRECT.
 	};
 	
 	// The onsubmit event will be reviewed in upcoming Course Material.
 	// THE LINE DIRECTLY BELOW IS CORRECT
-	document.forms[0].onsubmit = function(){
-		var query = searchInput.value;
-		validate(query);
+	document.forms[0].onsubmit = function(){                        //define function for form on submit
+		var query = searchInput.value;                              //query variable to search input value
+		validate(query);                                            //pass query parameter to validate variable
 
         // return false is needed for most events - this will be reviewed in upcoming course material
         // THE LINE DIRECTLY BELOW IS CORRECT
