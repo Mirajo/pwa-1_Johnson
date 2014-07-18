@@ -19,12 +19,12 @@
 	var validate = function(query){   //create validate function
 		
 		// Trim whitespace from start and end of search query
-		while(query.charAt(0) = " "){        //while loop to check the length of query is equal to
+		while(query.charAt(0) === " "){        //while loop to check the length of query is equal to
 			query = query.substring(1, query.length);        //
 		};
 		while(query.charAt(query.length-1) === ""){          // 
 			query = query.substring(0, query.length-1);
-		;   												 // error extra colon
+		};   												 // error extra colon
 		 
 		// Check search length, must have 3 characters
 		if(query.length < 3){       // check to see if the query has less than three characters
@@ -39,7 +39,7 @@
 	};
 	
 	// Finds search matches
-	var search = function(query)                               //Define the search variable and function
+	var search = function(query){                          //Define the search variable and function
 		
 		// split the user's search query string into an array   
 		var queryArray = query.join(" ");                       //variable for query array   
@@ -66,6 +66,8 @@
 				if(compare !== -1){                                //if compare does not equal
 					results.push(db[i]);                           //database results
 				};
+		   };
+		};  
 				
 		
 		results.sort();                                            //sort results
@@ -115,13 +117,13 @@
 	
 	// The onsubmit event will be reviewed in upcoming Course Material.
 	// THE LINE DIRECTLY BELOW IS CORRECT
-	document.forms[0].onsubmit = function(){                        //define function for form on submit
-		var query = searchInput.value;                              //query variable to search input value
-		validate(query);                                            //pass query parameter to validate variable
+	document.forms[0].onsubmit = function() {                        //define function for form on submit
+        var query = searchInput.value;                              //query variable to search input value
+        validate(query);                                            //pass query parameter to validate variable
 
         // return false is needed for most events - this will be reviewed in upcoming course material
         // THE LINE DIRECTLY BELOW IS CORRECT
-		return false;
-	;
+        return false;
+    };
 
 })();
