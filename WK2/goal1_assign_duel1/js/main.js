@@ -9,13 +9,13 @@
 (function (){
 
          playerOne = {
-             'name' : "Spiderman",
+             'name' : "Kabal",
              'damage': 50,
              'health': 100
          } ;
 
         playerTwo = {
-            'name': "Batman",
+            'name': "Kratos",
             'damage': 50,
             'health': 100
 
