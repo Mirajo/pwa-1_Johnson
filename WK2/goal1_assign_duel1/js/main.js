@@ -10,16 +10,22 @@
 
          playerOne = {
              'name' : "Spiderman",
-             'damage': 20,
+             'damage': 50,
              'health': 100
          } ;
 
         playerTwo = {
             'name': "Batman",
-            'damage': 20,
+            'damage': 50,
             'health': 100
 
  };
+
+var players = [playerOne, playerTwo];
+
+var fight = true;
+
+
 
 
 
