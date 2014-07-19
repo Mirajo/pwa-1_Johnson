@@ -26,6 +26,10 @@ var players = [playerOne, playerTwo];
 var fight = true;
 
 
+var rnd = 0;
+
+var btn = document.querySelector('.buttonblue');  //Variable to select the fight button within the html page
+
 
 
 
