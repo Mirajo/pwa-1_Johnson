@@ -1,4 +1,10 @@
 /*
+ Name: Miranda Johnson
+ Date: 07 -24 -14
+ Class & Section:  PWA1-####
+ Comments: "Week 3 Search Engine"
+ */
+/*
      Name: Miranda Johnson
      Date: 07 -11 -14
      Class & Section:  PWA1-####
@@ -53,7 +59,7 @@
 			// each db[i] is a single video item, each title ends with a pipe "|"
 			// save a lowercase variable of the video title
 			var dbTitleEnd = db[i].indexOf('|');                  //variable for database
-			var dbitem = db[i].tolowercase().substring(0, dbTitleEnd);   //convert variable to lower case
+			var dbitem = db[i].toLowerCase().substring(0, dbTitleEnd);   //convert variable to lower case
 			
 			// loop through the user's search query words
 			// save a lowercase variable of the search keyword

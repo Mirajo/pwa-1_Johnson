@@ -23,26 +23,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="search.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/js/search.js">
+      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../WK2/goal1_assign_duel1/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.099075295" vertical-offset="0" max-vertical-offset="1845">
-              <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="750">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
               <folding>
-                <element signature="e#1173#1538#0" expanded="false" />
-                <marker date="1405727465000" expanded="false" signature="4032:4047" placeholder="..." />
+                <element signature="n#!!doc" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../WK2/goal1_assign_duel1/js/main.js">
+      <file leaf-file-name="search.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../../WK3/goal3_assign_debug_v2/js/search.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="750">
-              <caret line="30" column="45" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="45" />
+            <state vertical-scroll-proportion="0.336856" vertical-offset="585" max-vertical-offset="2025">
+              <caret line="61" column="37" selection-start-line="61" selection-start-column="37" selection-end-line="61" selection-end-column="37" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
+                <element signature="e#111#238#0" expanded="false" />
+                <marker date="1406332903000" expanded="false" signature="4143:4158" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -70,12 +71,13 @@
       <list>
         <option value="$PROJECT_DIR$/js/search.js" />
         <option value="$PROJECT_DIR$/../../WK2/goal1_assign_duel1/js/main.js" />
+        <option value="$PROJECT_DIR$/../../WK3/goal3_assign_debug_v2/js/search.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="223" />
-    <option name="y" value="22" />
+    <option name="x" value="203" />
+    <option name="y" value="96" />
     <option name="width" value="1054" />
     <option name="height" value="867" />
   </component>
@@ -120,7 +122,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../WK2/goal1_assign_duel1/css/style.css" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../WK3/goal3_assign_debug_v2/js/search.js" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -143,7 +145,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="223" y="22" width="1054" height="867" extended-state="0" />
+    <frame x="203" y="96" width="1054" height="867" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -185,6 +187,17 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/js/search.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.099075295" vertical-offset="0" max-vertical-offset="1845">
+          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+          <folding>
+            <element signature="e#1173#1538#0" expanded="false" />
+            <marker date="1405727465000" expanded="false" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../../WK2/goal1_assign_duel1/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="330" max-vertical-offset="1590">
@@ -196,20 +209,21 @@
     <entry file="file://$PROJECT_DIR$/../../WK2/goal1_assign_duel1/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="750">
-          <caret line="30" column="45" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="45" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/search.js">
+    <entry file="file://$PROJECT_DIR$/../../WK3/goal3_assign_debug_v2/js/search.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.099075295" vertical-offset="0" max-vertical-offset="1845">
-          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+        <state vertical-scroll-proportion="0.336856" vertical-offset="585" max-vertical-offset="2025">
+          <caret line="61" column="37" selection-start-line="61" selection-start-column="37" selection-end-line="61" selection-end-column="37" />
           <folding>
-            <element signature="e#1173#1538#0" expanded="false" />
-            <marker date="1405727465000" expanded="false" signature="4032:4047" placeholder="..." />
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#111#238#0" expanded="false" />
+            <marker date="1406332903000" expanded="false" signature="4143:4158" placeholder="..." />
           </folding>
         </state>
       </provider>
