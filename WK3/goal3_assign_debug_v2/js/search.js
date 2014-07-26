@@ -4,14 +4,6 @@
  Class & Section:  PWA1-####
  Comments: "Week 3 Search Engine"
  */
-/*
-     Name: Miranda Johnson
-     Date: 07 -11 -14
-     Class & Section:  PWA1-####
-     Comments: "Goal 3: Review of WPF"
- */
-
-
 // Create privatized scope using a self-executing function
 (function(){
 	
@@ -64,7 +56,7 @@
 			// loop through the user's search query words
 			// save a lowercase variable of the search keyword
 			for(var ii=0, jj=queryArray.length; ii<jj; ii++){      // for loop to query through an array
-				var qitem = queryArray[ii].tolowercase();          //query through array change to lowercase
+				var qitem = queryArray[ii].toLowerCase();          //query through array change to lowercase
 				
 				// is the keyword anywhere in the video title?
 				// If a match is found, push full db[i] into results array
@@ -79,7 +71,7 @@
 		results.sort();                                            //sort results
 		
 		// Check that matches were found, and run output functions
-		if(results.length = 0){                                   //If results length is 0
+		if(results.length === 0){                                   //If results length is 0
 			noMatch();                                            // There is no match
 		}else{                                                    // if/ else statement
 			showMatches(results);                                 // else show the results/matches
