@@ -72,8 +72,6 @@
 		
 		results.sort();                                           //sort results
 
-
-
 		// Check that matches were found, and run output functions
 		if(results.length === 0){                                   //If results length is 0
 			noMatch();                                            // There is no match
