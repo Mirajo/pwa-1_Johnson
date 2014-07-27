@@ -9,8 +9,8 @@
 
        console.log("** Let's Fight**");                                         //Print out Let's fight
 
-       var playerOne = document.querySelector("kabal").querySelector("p");       // dom selection for player one
-       var playerTwo = document.querySelector("krotas").querySelector("p");     //dom selection for player two
+       var playerOne = document.querySelector("#kabal").querySelector("p");       // dom selection for player one
+       var playerTwo = document.querySelector("#krotas").querySelector("p");     //dom selection for player two
        var round_txt = document.querySelector("h5");                            //Text between h4, h5 html tag
        var button = document.getElementById("fight_btn");                       //Main button to start fight
 
@@ -65,7 +65,7 @@
                  alert(result);                                    //Print out results
                  break;
 
-                 button.removeEventListerner("click", fight, false); //remove event listerner
+                 button.removeEventListerner("click", fight, false); //remove event listener
              };
          };
      };
