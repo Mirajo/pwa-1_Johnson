@@ -66,8 +66,11 @@ var round = 0;                                                      //variable f
      {
          result = "You Both Lose";                                 //Results for both players losing the games
      }else if(playerOne[2]<1){
-          result = playerTwo[0]+" WINS !"                          //If player two wines
-     }
+          result = playerTwo[0]+" WINS !"                         //If player two wins
+     }else if (playerTwo[2]<1){
+          result = playerOne[0]+" WINS !"                        //If player one wins
+
+         };
      }
 
 
