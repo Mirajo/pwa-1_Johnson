@@ -64,6 +64,8 @@
              }else{
                  alert(result);                                    //Print out results
                  break;
+
+                 button.removeEventListerner("click", fight, false); //remove event listerner
              };
          };
      };
