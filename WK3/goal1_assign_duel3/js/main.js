@@ -48,6 +48,13 @@ var rnd = 0;                                                      //variable for
              console.log(playerOne[0]+":"+playerOne[2] + " "+playerTwo[0]+":"+playerTwo[2]); //Print out players
 
              var result = winnerCheck();                          //variable to check for a winner
+
+             if (result === "no winner")                          If/else that will check for a winner
+             {
+                 round++;                                          //Display the round and health for each fighter
+                 alert(playerOne[0]+":"+player[2]+" Round "+round+" OVER"+" "+playerTwo[0]+":"+player[2]);
+
+             }
          }
      }
 
