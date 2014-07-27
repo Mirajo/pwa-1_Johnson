@@ -23,8 +23,6 @@
 
        console.log("** We Are Fighting**");                         //Print out we are fighting
 
-var players = [playerOne, playerTwo];                              //
-
 var fight = true;
 
 
@@ -52,7 +50,7 @@ var round = 0;                                                      //variable f
              if (result === "no winner")                          If/else that will check for a winner
              {
                  round++;                                          //Display the round and health for each fighter
-                 alert(playerOne[0] + ":" + player[2] + " Round " + round + " OVER" + " " + playerTwo[0] + ":" + player[2]);
+                 alert(playerOne[0] + ":" + playerOne[2] + " Round " + round + " OVER" + " " + playerTwo[0] + ":" + playerTwo[2]);
 
              }else{
                  alert(result);                                    //Print out results
@@ -62,7 +60,16 @@ var round = 0;                                                      //variable f
      };
 
 
-     function winnerCheck()                                        //check for a winner
+     function winnerCheck(){                                        //check for a winner
+            var result = "no winner";                               //No winner variable
+     if (playerOne[2]<1 && playerTwo[2]<1)
+     {
+         result = "You Both Lose";                                 //Results for both players losing the games
+     }else if(playerOne[2]<1){
+          result = playerTwo[0]+" WINS !"                          //If player two wines
+     }
+     }
+
 
 
 
