@@ -5,21 +5,21 @@
      Comments: "Week 3 Duel game"
  */
 
-(function(){                                                           //self executing function
+(function(){                                                                     //self executing function
 
-       console.log("** Let's Fight**");                                 //Print out Let's fight
+       console.log("** Let's Fight**");                                         //Print out Let's fight
 
-       var fighter1_txt = document.querySelector("Kabal").querySelector("P"); // dom selection for player one
-       var fighter2_txt = document.querySelector("Krotas").querySelector("P");  //dom selection for player two
-       var round_txt = document.querySelector("h5");                         //Text between h4, h5 html tag
-       var button = document.getElementById("fight_btn");                //Main button to start fight
+       var playerOne = document.querySelector("kabal").querySelector("p");       // dom selection for player one
+       var playerTwo = document.querySelector("krotas").querySelector("p");     //dom selection for player two
+       var round_txt = document.querySelector("h5");                            //Text between h4, h5 html tag
+       var button = document.getElementById("fight_btn");                       //Main button to start fight
 
 
        console.log();                                                           //Print to console log
 
       button.addEventListener("click", fight, false);                            //Event listener for fight button
 
-      var fighters = [
+      var fighters = [                                                          //array for players
           {
               name: "Kabal",                                                   //fighter name
               damage: 50,                                                      // amount of damage done
@@ -34,9 +34,12 @@
        var round = 1;
 
        round_txt.innerHTML ="Click Button to Start !";                         //Click button to start
-       fighter1_txt.innerHTML = fighters[0].name + ":" + fighters[0].health;
+       playerOne.innerHTML = fighters[0].name + ":" + fighters[0].health;
+       playerTwo.innerHTML = fighters[1].name + ":" + fighters[1].health;      //Click button
 
-     /* function fight(){                                            //fight function
+     function onClick(){
+               fight();
+
          alert(playerOne[0]+":"+playerOne[2]+" *Start Fight* "+playerTwo[0]+":"+playerTwo[2]);
          for (var i = 0; i < 10; i++)
          {
