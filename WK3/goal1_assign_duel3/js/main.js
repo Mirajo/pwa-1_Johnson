@@ -28,7 +28,7 @@ var players = [playerOne, playerTwo];                              //
 var fight = true;
 
 
-var rnd = 0;                                                      //variable for rounds
+var round = 0;                                                      //variable for rounds
 
 //var btn = document.querySelector('.buttonblue');  //Variable to select the fight button within the html page
 
@@ -52,11 +52,14 @@ var rnd = 0;                                                      //variable for
              if (result === "no winner")                          If/else that will check for a winner
              {
                  round++;                                          //Display the round and health for each fighter
-                 alert(playerOne[0]+":"+player[2]+" Round "+round+" OVER"+" "+playerTwo[0]+":"+player[2]);
+                 alert(playerOne[0] + ":" + player[2] + " Round " + round + " OVER" + " " + playerTwo[0] + ":" + player[2]);
 
-             }
-         }
-     }
+             }else{
+                 alert(result);
+                 break;
+             };
+         };
+     };
 
 
 
