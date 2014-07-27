@@ -75,6 +75,7 @@ var round = 0;                                                      //variable f
          return result;
      };
 
+fight();                                                         //Call function start game
 
 
 
