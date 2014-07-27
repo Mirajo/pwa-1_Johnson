@@ -13,7 +13,7 @@
        var fighter2_txt = document.querySelector("Krotas").querySelector("P");  //dom selection for player two
        var round_txt = document.querySelector("h5");                         //Text between h4, h5 html tag
        var button = document.getElementById("fight_btn");                //Main button to start fight
-}
+
 
        console.log();                                                           //Print to console log
 
