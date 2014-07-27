@@ -55,12 +55,14 @@ var round = 0;                                                      //variable f
                  alert(playerOne[0] + ":" + player[2] + " Round " + round + " OVER" + " " + playerTwo[0] + ":" + player[2]);
 
              }else{
-                 alert(result);
+                 alert(result);                                    //Print out results
                  break;
              };
          };
      };
 
+
+     function winnerCheck()                                        //check for a winner
 
 
 
