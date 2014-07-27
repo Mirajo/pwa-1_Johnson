@@ -40,7 +40,7 @@
      function onClick(){
               fight();
 
-         alert(playerOne[0]+":"+playerOne[0]+" *Start Fight* "+playerTwo[1]+":"+playerTwo[1]);
+         alert(fighters[0].name+":"+fighters[0].health+" *Start Fight* "+fighters[1].name+":"+fighters[1].health);
          for (var i = 0; i < 10; i++)
          {
               var minDamage1 = playerOne[1] * .5;                //min Damage variable for player 1
