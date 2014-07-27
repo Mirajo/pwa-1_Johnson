@@ -9,8 +9,8 @@
 
        console.log("** Let's Fight**");                                         //Print out Let's fight
 
-       var playerOne = document.querySelector("#kabal").querySelector("p");       // dom selection for player one
-       var playerTwo = document.querySelector("#krotas").querySelector("p");     //dom selection for player two
+       var fighterOne = document.querySelector("#kabal").querySelector("p");       // dom selection for player one
+       var fighterTwo = document.querySelector("#krotas").querySelector("p");     //dom selection for player two
        var round_txt = document.querySelector("h5");                            //Text between h4, h5 html tag
        var button = document.getElementById("fight_btn");                       //Main button to start fight
 
@@ -34,58 +34,56 @@
        var round = 1;
 
        round_txt.innerHTML = "Click Button to Start !";                         //Click button to start
-       playerOne.innerHTML = fighters[0].name + ":" + fighters[0].health;       //
-       playerTwo.innerHTML = fighters[1].name + ":" + fighters[1].health;       //
+       fighterOne.innerHTML = fighters[0].name + ":" + fighters[0].health;       //
+       fighterTwo.innerHTML = fighters[1].name + ":" + fighters[1].health;       //
 
      function onClick(){
               fight();
 
          alert(fighters[0].name+":"+fighters[0].health+" *Start Fight* "+fighters[1].name+":"+fighters[1].health);
-         for (var i = 0; i < 10; i++)
-         {
-              var minDamage1 = playerOne[1] * .5;                //min Damage variable for player 1
-              var minDamage2 = playerTwo[1] * .5;                //min Damage variable for player 2
+         fighterOne.innerHTML = fighters[0].name + ":" + fighters[0].health;       //
+         fighterTwo.innerHTML = fighters[1].name + ":" + fighters[1].health;       //
 
-              var f1 = Math.floor(Math.random()*(playerOne[0]-minDamage1)+minDamage1);
-              var f2 = Math.floor(Math.random()*(playerTwo[1]-minDamage2)+minDamage2);
 
-             playerOne[0]-=f1;
-             playerTwo[1]-=f2;
 
-             console.log(playerOne[0] + ":" + playerOne[0] + " "+ playerTwo[1] + ":"+ playerTwo[1]); //Print out players
+              /* var minDamage1 = fighters[0] * .5;                //min Damage variable for player 1
+              var minDamage2 = fighters[1] * .5;                //min Damage variable for player 2 */
+
+              var f1 = Math.floor(Math.random() * (fighters[0].damage + fighters[0].damage * .5);
+              var f2 = Math.floor(Math.random() * (fighters[1].damage + fighters[1].damage * .5);
+
+             fighters[0]-=f1;
+             fighters[1]-=f2;
+
+             console.log(fighters[0] + ":" + fighters[0] + " "+ fighters[1] + ":"+ fighters[1]); //Print out players
 
              var result = winnerCheck();                          //variable to check for a winner
 
              if (result === "no winner")                          //If/else that will check for a winner
              {
                  round++;                                          //Display the round and health for each fighter
-                 alert(playerOne[0] + ":" + playerOne[0] + " Round " + round + " OVER" + " " + playerTwo[1] + ":" + playerTwo[1]);
+                 alert(fighters[0] + ":" + fighters[0] + " Round " + round + " OVER" + " " + fighters[1] + ":" + fighters[1]);
 
-             }else{
+             }else {
                  alert(result);                                    //Print out results
                  break;
 
                  button.removeEventListerner("click", fight, false); //remove event listener
-             };
-         };
-     };
+             }
 
 
-     function winnerCheck(){                                        //check for a winner
-            var result = "no winner";                               //No winner variable
-     if (playerOne[0]<1 && playerTwo[1]<1)
-     {
-         result = "You Both Lose";                                 //Results for both players losing the games
-     }else if(playerOne[0]<1){
-          result = playerTwo[1]+" WINS !"                          //If player two wins
-     }else if (playerTwo[1]<1){
-          result = playerOne[0]+" WINS !"                          //If player one wins
+     function winnerCheck() {                                        //check for a winner
+         var result = "no winner";                               //No winner variable
+         if (fighters[0].health < 1 && fighters[1].health < 1) {
+             result = "You Both Lose !!";                                 //Results for both players losing the games
+         } else if (fighters[0].health < 1) {
+             result = fighters[1].name + " WINS !"                          //If player two wins
+         } else if (fighters[1].health < 1) {
+             result = fighters[0].name + " WINS !"                          //If player one wins
 
-         };
+         }
 
          return result;
-     };
-
-fight();                                                         //Call function start game
+     }
 
 })();
