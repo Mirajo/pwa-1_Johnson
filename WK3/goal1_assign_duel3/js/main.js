@@ -71,7 +71,9 @@ var round = 0;                                                      //variable f
           result = playerOne[0]+" WINS !"                        //If player one wins
 
          };
-     }
+
+         return result;
+     };
 
 
 
