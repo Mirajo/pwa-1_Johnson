@@ -1,34 +1,23 @@
 /*
      Name: Miranda Johnson
-     Date: 07 -17 -14
+     Date: 07- 25 -14
      Class & Section:  PWA1-####
-     Comments: "Week 2 Duel game"
+     Comments: "Week 3 Duel game"
  */
- (function(){                                                          //self executing function
 
-         console.log("** Let's Fight**");                             //Print out Let's fight
+ (function(){                                                           //self executing function
 
-         playerOne = {                                               //array for player one
-             'name' : "Kabal",
-             'damage': 50,
-             'health': 100
-         };
+       console.log("** Let's Fight**");                                 //Print out Let's fight
 
-        playerTwo = {                                               //array for player two
-            'name': "Kratos",
-            'damage': 50,
-            'health': 100
+       var fighter1_txt = document.querySelector("Kabal").querySelector("P"); // dom selection for player one
+       var fighter2_txt = document.querySelector("Krotas").querySelector("P");  //dom selection for player two
+       var round_txt = document.querySelector("h5");                         //Text between h4, h5 html tag
+       var button = document.getElementById("fight_btn");                //Main button to start fight
+}
 
- };
+       console.log();                         //Print to console log
 
-       console.log("** We Are Fighting**");                         //Print out we are fighting
-
-var fight = true;
-
-
-var round = 0;                                                      //variable for rounds
-
-//var btn = document.querySelector('.buttonblue');  //Variable to select the fight button within the html page
+button.addEventListener("click", fight, false);                       //Event listener for fight button
 
      function fight(){                                            //fight function
          alert(playerOne[0]+":"+playerOne[2]+" *Start Fight* "+playerTwo[0]+":"+playerTwo[2]);
@@ -66,9 +55,9 @@ var round = 0;                                                      //variable f
      {
          result = "You Both Lose";                                 //Results for both players losing the games
      }else if(playerOne[2]<1){
-          result = playerTwo[0]+" WINS !"                         //If player two wins
+          result = playerTwo[0]+" WINS !"                          //If player two wins
      }else if (playerTwo[2]<1){
-          result = playerOne[0]+" WINS !"                        //If player one wins
+          result = playerOne[0]+" WINS !"                          //If player one wins
 
          };
 
@@ -77,14 +66,4 @@ var round = 0;                                                      //variable f
 
 fight();                                                         //Call function start game
 
-
-
-
-
-
-
-
-
-
-
-};
+})();
