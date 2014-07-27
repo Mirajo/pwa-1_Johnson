@@ -33,14 +33,14 @@
 
        var round = 1;
 
-       round_txt.innerHTML ="Click Button to Start !";                         //Click button to start
-       playerOne.innerHTML = fighters[0].name + ":" + fighters[0].health;
-       playerTwo.innerHTML = fighters[1].name + ":" + fighters[1].health;      //Click button
+       round_txt.innerHTML = "Click Button to Start !";                         //Click button to start
+       playerOne.innerHTML = fighters[0].name + ":" + fighters[0].health;       //
+       playerTwo.innerHTML = fighters[1].name + ":" + fighters[1].health;       //
 
      function onClick(){
-               fight();
+              fight();
 
-         alert(playerOne[0]+":"+playerOne[2]+" *Start Fight* "+playerTwo[0]+":"+playerTwo[2]);
+         alert(playerOne[0]+":"+playerOne[0]+" *Start Fight* "+playerTwo[1]+":"+playerTwo[1]);
          for (var i = 0; i < 10; i++)
          {
               var minDamage1 = playerOne[1] * .5;                //min Damage variable for player 1
@@ -52,7 +52,7 @@
              playerOne[2]-=f1;
              playerTwo[2]-=f2;
 
-             console.log(playerOne[0]+":"+playerOne[2] + " "+playerTwo[0]+":"+playerTwo[2]); //Print out players
+             console.log(playerOne[0] + ":" + playerOne[2] + " "+ playerTwo[0] + ":"+ playerTwo[2]); //Print out players
 
              var result = winnerCheck();                          //variable to check for a winner
 
