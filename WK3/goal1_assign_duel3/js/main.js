@@ -46,20 +46,20 @@
               var minDamage1 = playerOne[1] * .5;                //min Damage variable for player 1
               var minDamage2 = playerTwo[1] * .5;                //min Damage variable for player 2
 
-              var f1 = Math.floor(Math.random()*(playerOne[1]-minDamage1)+minDamage1);
+              var f1 = Math.floor(Math.random()*(playerOne[0]-minDamage1)+minDamage1);
               var f2 = Math.floor(Math.random()*(playerTwo[1]-minDamage2)+minDamage2);
 
-             playerOne[2]-=f1;
-             playerTwo[2]-=f2;
+             playerOne[0]-=f1;
+             playerTwo[1]-=f2;
 
-             console.log(playerOne[0] + ":" + playerOne[2] + " "+ playerTwo[0] + ":"+ playerTwo[2]); //Print out players
+             console.log(playerOne[0] + ":" + playerOne[0] + " "+ playerTwo[1] + ":"+ playerTwo[1]); //Print out players
 
              var result = winnerCheck();                          //variable to check for a winner
 
              if (result === "no winner")                          //If/else that will check for a winner
              {
                  round++;                                          //Display the round and health for each fighter
-                 alert(playerOne[0] + ":" + playerOne[2] + " Round " + round + " OVER" + " " + playerTwo[0] + ":" + playerTwo[2]);
+                 alert(playerOne[0] + ":" + playerOne[0] + " Round " + round + " OVER" + " " + playerTwo[1] + ":" + playerTwo[1]);
 
              }else{
                  alert(result);                                    //Print out results
@@ -71,12 +71,12 @@
 
      function winnerCheck(){                                        //check for a winner
             var result = "no winner";                               //No winner variable
-     if (playerOne[2]<1 && playerTwo[2]<1)
+     if (playerOne[0]<1 && playerTwo[1]<1)
      {
          result = "You Both Lose";                                 //Results for both players losing the games
-     }else if(playerOne[2]<1){
-          result = playerTwo[0]+" WINS !"                          //If player two wins
-     }else if (playerTwo[2]<1){
+     }else if(playerOne[0]<1){
+          result = playerTwo[1]+" WINS !"                          //If player two wins
+     }else if (playerTwo[1]<1){
           result = playerOne[0]+" WINS !"                          //If player one wins
 
          };
