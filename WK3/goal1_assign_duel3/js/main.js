@@ -12,7 +12,7 @@
              'name' : "Kabal",
              'damage': 50,
              'health': 100
-         } ;
+         };
 
         playerTwo = {                                               //array for player two
             'name': "Kratos",
@@ -47,7 +47,7 @@ var round = 0;                                                      //variable f
 
              var result = winnerCheck();                          //variable to check for a winner
 
-             if (result === "no winner")                          If/else that will check for a winner
+             if (result === "no winner")                          //If/else that will check for a winner
              {
                  round++;                                          //Display the round and health for each fighter
                  alert(playerOne[0] + ":" + playerOne[2] + " Round " + round + " OVER" + " " + playerTwo[0] + ":" + playerTwo[2]);
