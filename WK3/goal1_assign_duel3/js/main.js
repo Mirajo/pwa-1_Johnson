@@ -5,7 +5,7 @@
      Comments: "Week 3 Duel game"
  */
 
- (function(){                                                           //self executing function
+(function(){                                                           //self executing function
 
        console.log("** Let's Fight**");                                 //Print out Let's fight
 
@@ -15,11 +15,28 @@
        var button = document.getElementById("fight_btn");                //Main button to start fight
 }
 
-       console.log();                         //Print to console log
+       console.log();                                                           //Print to console log
 
-button.addEventListener("click", fight, false);                       //Event listener for fight button
+      button.addEventListener("click", fight, false);                            //Event listener for fight button
 
-     function fight(){                                            //fight function
+      var fighters = [
+          {
+              name: "Kabal",                                                   //fighter name
+              damage: 50,                                                      // amount of damage done
+              health: 100                                                      // health value
+          },
+          {
+              name: "Krotas",                                                  //fighter name
+              damage: 50,                                                      // amount of damage done
+              health: 100                                                      // health value
+          }];
+
+       var round = 1;
+
+       round_txt.innerHTML ="Click Button to Start !";                         //Click button to start
+       fighter1_txt.innerHTML = fighters[0].name + ":" + fighters[0].health;
+
+     /* function fight(){                                            //fight function
          alert(playerOne[0]+":"+playerOne[2]+" *Start Fight* "+playerTwo[0]+":"+playerTwo[2]);
          for (var i = 0; i < 10; i++)
          {
