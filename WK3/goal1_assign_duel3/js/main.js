@@ -48,16 +48,18 @@
               var f1 = Math.floor(Math.random() * fighters[0].damage + fighters[0].damage * .5);
               var f2 = Math.floor(Math.random() * fighters[1].damage + fighters[1].damage * .5);
 
-             fighters[0]-=f1;
-             fighters[1]-=f2;
+             fighters[0].health-=f1;
+             fighters[1].health-=f2;
 
-             console.log(fighters[0] + ":" + fighters[0] + " "+ fighters[1] + ":"+ fighters[1]); //Print out players
+             console.log(fighters[0].name + ":" + fighters[0].health + " "+ fighters[1].name + ":"+ fighters[1].health); //Print out players
 
              var result = winnerCheck();                          //variable to check for a winner
 
+
+             round_txt.innerHTML = "Round" + round + "Results:" + result; //Display the round and health for each fighter
+             round++;
              if (result === "no winner")                          //If/else that will check for a winner
              {
-                 round++;                                          //Display the round and health for each fighter
                  alert(fighters[0] + ":" + fighters[0] + " Round " + round + " OVER" + " " + fighters[1] + ":" + fighters[1]);
                  fighterOne.innerHTML = fighters[0].name + ":" + fighters[0].health;
                  fighterTwo.innerHTML = fighters[1].name + ":" + fighters[1].health;
@@ -71,9 +73,10 @@
                  document.getElementById('.buttonblue'),innerHTML = "DONE";          //
              }
      }
+              console.log(result);
 
-     function winnerCheck() {                                        //check for a winner
-         var result = "no winner";                               //No winner variable
+     function winnerCheck() {                                             //check for a winner
+         var result = "no winner";                                        //No winner variable
          if (fighters[0].health < 1 && fighters[1].health < 1) {
              result = "You Both Lose !!";                                 //Results for both players losing the games
          } else if (fighters[0].health < 1) {
