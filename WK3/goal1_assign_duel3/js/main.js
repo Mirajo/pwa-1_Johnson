@@ -37,17 +37,12 @@
        fighterOne.innerHTML = fighters[0].name + ":" + fighters[0].health;       //
        fighterTwo.innerHTML = fighters[1].name + ":" + fighters[1].health;       //
 
-     function onClick(){
-              fight();
+     function fight(){
 
          alert(fighters[0].name+":"+fighters[0].health+" *Start Fight* "+fighters[1].name+":"+fighters[1].health);
          fighterOne.innerHTML = fighters[0].name + ":" + fighters[0].health;       //
          fighterTwo.innerHTML = fighters[1].name + ":" + fighters[1].health;       //
 
-
-
-              /* var minDamage1 = fighters[0] * .5;                //min Damage variable for player 1
-              var minDamage2 = fighters[1] * .5;                //min Damage variable for player 2 */
 
               var f1 = Math.floor(Math.random() * (fighters[0].damage + fighters[0].damage * .5);
               var f2 = Math.floor(Math.random() * (fighters[1].damage + fighters[1].damage * .5);
@@ -63,14 +58,18 @@
              {
                  round++;                                          //Display the round and health for each fighter
                  alert(fighters[0] + ":" + fighters[0] + " Round " + round + " OVER" + " " + fighters[1] + ":" + fighters[1]);
-
+                 fighterOne.innerHTML = fighters[0].name + ":" + fighters[0].health;
+                 fighterTwo.innerHTML = fighters[1].name + ":" + fighters[1].health;
              }else {
                  alert(result);                                    //Print out results
-                 break;
+                 fighterOne.innerHTML = result;
+                 fighterTwo.innerHTML = "";
 
-                 button.removeEventListerner("click", fight, false); //remove event listener
+                 button.removeEventListener("click", fight, false); //remove event listener
+
+                 document.querySelector(".buttonblue"),innerHTML = "DONE";          //
              }
-
+     }
 
      function winnerCheck() {                                        //check for a winner
          var result = "no winner";                               //No winner variable
