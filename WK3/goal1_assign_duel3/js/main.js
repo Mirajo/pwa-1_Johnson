@@ -5,6 +5,7 @@
      Comments: "Week 3 Duel game"
  */
 
+
 (function(){                                                                      //self executing function
 
        console.log("** Let's Fight**");                                           //Print out Let's fight
@@ -15,7 +16,7 @@
        var button = document.getElementById('fight_btn');                       //Main button to start fight
 
 
-       console.log();                                                           //Print to console log
+       console.log("Here come the button");                                                           //Print to console log
 
       button.addEventListener("click", fight, false);                            //Event listener for fight button
 
@@ -34,18 +35,18 @@
        var round = 1;
 
        round_txt.innerHTML = "Click Button to Start !";                         //Click button to start
-       fighterOne.innerHTML = fighters[0].name + ":" + fighters[0].health;       //
-       fighterTwo.innerHTML = fighters[1].name + ":" + fighters[1].health;       //
+       fighterOne.innerHTML = fighters[0].name + ':' + fighters[0].health;       //
+       fighterTwo.innerHTML = fighters[1].name + ':' + fighters[1].health;       //
 
      function fight(){
 
-         alert(fighters[0].name+":"+fighters[0].health+" *Start Fight* "+fighters[1].name+":"+fighters[1].health);
+         alert(fighters[0].name + ':' + fighters[0].health + "*Start Fight*"  + fighters[1].name + ':' + fighters[1].health);
          fighterOne.innerHTML = fighters[0].name + ":" + fighters[0].health;       //
          fighterTwo.innerHTML = fighters[1].name + ":" + fighters[1].health;       //
 
 
-              var f1 = Math.floor(Math.random() * (fighters[0].damage + fighters[0].damage * .5);
-              var f2 = Math.floor(Math.random() * (fighters[1].damage + fighters[1].damage * .5);
+              var f1 = Math.floor(Math.random() * fighters[0].damage + fighters[0].damage * .5);
+              var f2 = Math.floor(Math.random() * fighters[1].damage + fighters[1].damage * .5);
 
              fighters[0]-=f1;
              fighters[1]-=f2;
