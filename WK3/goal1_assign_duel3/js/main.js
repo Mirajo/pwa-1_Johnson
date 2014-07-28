@@ -5,14 +5,14 @@
      Comments: "Week 3 Duel game"
  */
 
-(function(){                                                                     //self executing function
+(function(){                                                                      //self executing function
 
-       console.log("** Let's Fight**");                                         //Print out Let's fight
+       console.log("** Let's Fight**");                                           //Print out Let's fight
 
-       var fighterOne = document.querySelector("#kabal").querySelector("p");       // dom selection for player one
-       var fighterTwo = document.querySelector("#krotas").querySelector("p");     //dom selection for player two
-       var round_txt = document.querySelector("h5");                            //Text between h4, h5 html tag
-       var button = document.getElementById("fight_btn");                       //Main button to start fight
+       var fighterOne = document.getElementById('kabal');                        // dom selection for player one
+       var fighterTwo = document.getElementById('krotas');                      //dom selection for player two
+       var round_txt = document.getElementById('h5');                            //Text between h4, h5 html tag
+       var button = document.getElementById('fight_btn');                       //Main button to start fight
 
 
        console.log();                                                           //Print to console log
@@ -21,12 +21,12 @@
 
       var fighters = [                                                          //array for players
           {
-              name: "Kabal",                                                   //fighter name
+              name: 'Kabal',                                                   //fighter name
               damage: 50,                                                      // amount of damage done
               health: 100                                                      // health value
           },
           {
-              name: "Krotas",                                                  //fighter name
+              name: 'Krotas',                                                  //fighter name
               damage: 50,                                                      // amount of damage done
               health: 100                                                      // health value
           }];
@@ -67,7 +67,7 @@
 
                  button.removeEventListener("click", fight, false); //remove event listener
 
-                 document.querySelector(".buttonblue"),innerHTML = "DONE";          //
+                 document.getElementById('.buttonblue'),innerHTML = "DONE";          //
              }
      }
 
