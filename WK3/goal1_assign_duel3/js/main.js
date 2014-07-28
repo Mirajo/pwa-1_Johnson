@@ -5,8 +5,9 @@
      Comments: "Week 3 Duel game"
  */
 
+console.log("here we go again");
 
-(function(){                                                                      //self executing function
+/* (function(){                                                                      //self executing function
 
        console.log("** Let's Fight**");                                           //Print out Let's fight
 
